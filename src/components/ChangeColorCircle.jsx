@@ -1,16 +1,16 @@
 export const ChangeColorCircle = () => {
   return (
     <>
-      <span className="circle">〇</span>
+      <span className="circle" style={{color: "red"}}>〇</span>
       <button
         onClick={() => {
           let circle = document.querySelector(".circle");
           console.log(circle);
-            circle.style.color === "darkblue"
-              ? (circle.style.color = "green")
-              : (circle.style.color = "darkblue");
+            circle.style.color === "red"
+              ? (circle.style.color = "darkblue")
+              : (circle.style.color = "red");
         }}
-        className="btn_changeColor"
+        className="btn"
       >
         Change Color
       </button>
@@ -18,7 +18,9 @@ export const ChangeColorCircle = () => {
   );
 };
 
-// 1) Make a component that displays a checkbox and a dark blue circle.
-//    If the checkbox is checked, the circle should turn green.
-//    When it is unchecked it should turn dark blue.
+// Question: Why first qlick doesn't work??
+
+// 1) Make a component that displays a checkbox and a red circle.
+//    If the checkbox is checked, the circle should turn dark blue.
+//    When it is unchecked it should turn red.
 //    The transition should be animated.
